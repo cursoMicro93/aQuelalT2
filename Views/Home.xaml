@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aQuelalT2.Views.Home"
+             Title="Home">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Nombre del Estudiante" FontAttributes="Bold" />
+            <Picker x:Name="pickerEstudiantes" Title="Selecciona un estudiante">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ana Torres</x:String>
+                        <x:String>Pedro Pérez</x:String>
+                        <x:String>Luisa Martínez</x:String>
+                        <x:String>Carlos Romero</x:String>
+                        <x:String>Sofía Andrade</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Nota Seguimiento 1 (sobre 10)" />
+            <Entry x:Name="entrySeguimiento1" Keyboard="Numeric" Placeholder="0 - 10" />
+
+            <Label Text="Examen 1 (sobre 10)" />
+            <Entry x:Name="entryExamen1" Keyboard="Numeric" Placeholder="0 - 10" />
+
+            <BoxView HeightRequest="1" Color="Gray" />
+
+            <Label Text="Nota Seguimiento 2 (sobre 10)" />
+            <Entry x:Name="entrySeguimiento2" Keyboard="Numeric" Placeholder="0 - 10" />
+
+            <Label Text="Examen 2 (sobre 10)" />
+            <Entry x:Name="entryExamen2" Keyboard="Numeric" Placeholder="0 - 10" />
+
+            <Label Text="Fecha" />
+            <DatePicker x:Name="dateFecha" />
+
+            <Button Text="Calcular" Clicked="OnCalcularClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
